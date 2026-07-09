@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.main {
+    width: 200px;
+    height: 200px;
+    background: url("../images/taka.png") no-repeat center /cover;
+    /* 
+    animation-name: ghurano;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    */
+    animation: ghurano 4s infinite linear;
+    margin-top: 50px;
+}
+
+@keyframes ghurano {
+    0%{ transform: rotate(0deg); margin-left: -200px; }
+    50%{ transform: rotate(360deg); margin-left: calc(50% - 100px) }
+    100%{ transform: rotate(720deg); margin-left: 100% }
+}

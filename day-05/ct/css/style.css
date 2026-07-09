@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb, #ec4899);
+    background-size: 300% 300%;
+    animation: bgShift 8s ease infinite;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.animated-text {
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffffff, #93c5fd, #f9a8d4, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: textGlow 3s linear infinite, float 3s ease-in-out infinite;
+}
+
+@keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes textGlow {
+    to { background-position: 200% center; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 .france {
     width: 200px;
     height: 200px;
@@ -25,4 +27,39 @@
     margin: 20px;
     padding: 20px;
 
+}
+
+.main {
+    width: 600px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    /* 
+    text-decoration-line: overline underline;
+    text-decoration-style: dashed;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px; 
+    */
+    /* text-decoration: overline underline wavy red 3px; */
+    /* text-transform: uppercase; */
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 48px;
+    text-shadow: 2px 2px 6px orangered;
+    font-weight: bolder;
+    font-style: italic;
+    text-indent: 50px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 28px;
+    /* text-align-last: right; */
+}
+
+/* block, inline, inline-block */
+
+.bel {
+    display: inline-block;
+    background: yellow;
+    width: 300px;
 }
