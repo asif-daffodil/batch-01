@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.myDiv::before {
+    content: "Mr. ";
+}
+
+.myDiv::after {
+    content: " Mia.";
+}
+
+.otherDiv {
+    width: 150px;
+    height: 150px;background: limegreen;
+    margin: 100px auto;
+    position: relative;
+}
+
+.otherDiv::before {
+    content: "";
+    width: 75px;
+    height: 75px;
+    background: blueviolet;
+    position: absolute;
+    top: -75px;
+    left: -75px;
+    transition: 0.5s;
+}
+
+.otherDiv::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    background: blueviolet;
+    position: absolute;
+    bottom: -75px;
+    right: -75px;
+    transition: 0.5s;
+}
+
+.otherDiv:hover::before {
+    top: 150px;
+    left: 150px;
+    transform: rotate(720deg);
+    background: hotpink;
+    border-radius: 50%;
+}
+
+.otherDiv:hover::after {
+    bottom: 150px;
+    right: 150px;
+    transform: rotate(720deg);
+    background: hotpink;
+    border-radius: 50%;
+}
