@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url("./other.css");
+
+$textColor1 : #d00; 
+$textColor2 : #0d0; 
+$textColor3 : #33d; 
+
+.myText {
+    color: $textColor3;
+}
+
+@mixin chieldCenter ($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+.parent {
+    width: 200px;
+    height: 200px;
+    background: $textColor2;
+    @include chieldCenter(center, center);
+
+    >.chield{
+        width: 100px;
+        height: 100px;
+        background: $textColor1;
+        position: relative;
+        &:hover {
+            background: hotpink;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            background: yellow;
+        }
+    }
+}
+
+.alal {
+    width: 400px;
+    height: 400px;
+    background: #0d0;
+}
+
+.dulal {
+    @extend .alal;
+    background: #33d;
+}
